@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import PlantList from './components/Plantlist';
+import pic from "./images/logo192.png"
+import Login from './components/Login';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppBar position="static" color="default">
+        <Toolbar>
+          <img src={pic} width={70} height={50} alt='PlantShop logo' />
+          <Typography variant='h6' color="inherit">
+            PlantList
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <Login/>
     </div>
   );
 }
